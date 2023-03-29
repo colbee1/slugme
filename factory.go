@@ -1,6 +1,6 @@
 package slugme
 
-func New(opt Options) (*slugme, error) {
+func New(opt Options) *slugme {
 	s := &slugme{
 		allowed:   opt.Allowed,
 		lowerCase: !opt.KeepCase,
@@ -13,5 +13,5 @@ func New(opt Options) (*slugme, error) {
 		s.replace = r[0]
 	}
 
-	return s, nil
+	return s
 }

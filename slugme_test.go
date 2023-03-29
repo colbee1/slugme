@@ -9,8 +9,7 @@ import (
 func Test1(t *testing.T) {
 	require := require.New(t)
 
-	title, err := New(DefaultOptions)
-	require.NoError(err)
+	title := New(DefaultOptions)
 	require.NotNil(title)
 
 	slug := title.Slug(" L'oiseau à   deux becs ")
@@ -26,8 +25,7 @@ func Test2(t *testing.T) {
 		KeepCase: true,
 	}
 
-	ref, err := New(opts)
-	require.NoError(err)
+	ref := New(opts)
 	require.NotNil(ref)
 
 	slug := ref.Slug("MF   218 F/A _ LIMF 218 FA")
@@ -37,8 +35,7 @@ func Test2(t *testing.T) {
 func Test3(t *testing.T) {
 	require := require.New(t)
 
-	title, err := New(DefaultOptions)
-	require.NoError(err)
+	title := New(DefaultOptions)
 	require.NotNil(title)
 
 	slug := title.Slug("\u019a")
@@ -52,8 +49,7 @@ func Test3(t *testing.T) {
 func Test4(t *testing.T) {
 	require := require.New(t)
 
-	title, err := New(DefaultOptions)
-	require.NoError(err)
+	title := New(DefaultOptions)
 	require.NotNil(title)
 
 	slug := title.Slug("€€€€  €€€€")
@@ -63,8 +59,7 @@ func Test4(t *testing.T) {
 func Test5(t *testing.T) {
 	require := require.New(t)
 
-	title, err := New(DefaultOptions)
-	require.NoError(err)
+	title := New(DefaultOptions)
 	require.NotNil(title)
 
 	slug := title.Slug("$$$hello$$$")

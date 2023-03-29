@@ -7,12 +7,12 @@ slugme is a golang package to convert any string to it's slug according to some 
 ```go
     import "github.com/colbee1/slugme"
 
-    title, _ := slugme.New(slugme.DefaultOptions)
+    title := slugme.New(slugme.DefaultOptions)
     slug := title.Slug(" L'oiseau à   deux becs ")
     // l-oiseau-a-deux-becs
 
 
-    ref, _ := slugme.New(slugme.Options{
+    ref := slugme.New(slugme.Options{
         opts.Allowed = "-+*/",
         opts.Replace = '',
         opts.KeepCase = true,
