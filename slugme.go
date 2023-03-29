@@ -6,7 +6,7 @@ import (
 )
 
 var DefaultOptions = Options{
-	Allowed: "-_+",
+	Allowed: "-_",
 	Replace: "-",
 }
 
