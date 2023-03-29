@@ -12,19 +12,19 @@ slugme is a golang package to convert any string to it's slug according to some 
     // l-oiseau-a-deux-becs
 
 
-    ref := slugme.New(slugme.Options{
-        opts.Allowed = "-+*/",
-        opts.Replace = '',
-        opts.KeepCase = true,
-        })
-    slug = ref.Slug("MF 218 F/A_LIMF 218 FA")
+	ref := slugme.New(slugme.Options{
+		Allowed:  "-+*/",
+		Replace:  "",
+		KeepCase: true,
+	})
+	slug = ref.Slug("MF 218 F/A_LIMF 218 FA")
     // MF218F/A_LIMF218FA
 ```
 
 ## Options
 
 - Allowed (string)
-  List of allowed characters in slug.
+  List of allowed characters in slug (excluding letters and numbers).
   Default is "-\_+".
 
 - Replace (string)
