@@ -11,12 +11,12 @@ var DefaultOptions = Options{
 }
 
 type Options struct {
-	Allowed      string // Allowed symbols in slug with letters and numbers.
+	Allowed      string // Allowed symbols in slug in addition to letters (a-Z) and numbers (0-9).
 	Replace      string // Replace all disallowed symbols by this one.
 	KeepCase     bool   // Do not lower case the slug
-	KeepNonAscii bool   // Do not try to convert letters to ASCII7, aka: remove diacritics.
-	NoShrink     bool   // Do not shrink repetition of Options.Replace char.
-	NoTrim       bool   // Do not trim Options.Replace at start and end.
+	KeepNonAscii bool   // Do not try to convert letters to ASCII7, aka: do not remove diacritics.
+	NoShrink     bool   // Do not shrink repetition of Replace char.
+	NoTrim       bool   // Do not trim slug start/end for Replace character.
 }
 
 type slugme struct {
